@@ -49,21 +49,7 @@ class :uc:packageServiceProvider extends EventServiceProvider
         $this->mergeConfigFrom(__DIR__.'/../config/:lc:package.php', ':lc:package');
 
         $this->app->singleton(:uc:packageRepositoryInterface::class, :uc:packageRepository::class);
-
-        // Register the service the package provides.
-        $this->app->singleton(':lc:package', function ($app) {
-            return new :uc:package;
-        });
-    }
-
-    /**
-     * Get the services provided by the provider.
-     *
-     * @return array
-     */
-    public function provides()
-    {
-        return [':lc:package'];
+        
     }
 
     /**
