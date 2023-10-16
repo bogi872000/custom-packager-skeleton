@@ -49,7 +49,7 @@ class :uc:packageServiceProvider extends EventServiceProvider
         $this->mergeConfigFrom(__DIR__.'/../config/:lc:package.php', ':lc:package');
 
         $this->app->singleton(:uc:packageRepositoryInterface::class, :uc:packageRepository::class);
-        
+
     }
 
     /**

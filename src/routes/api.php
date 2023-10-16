@@ -5,7 +5,7 @@ use :uc:vendor\:uc:package\Http\Controllers\:uc:packageController;
 
 Route::prefix('apiv1/internal/apps')->group(
     function () {
-        Route::group(['middleware' => ['auth:sanctum', 'subscribed']],
+        Route::group(['middleware' => ['auth:api']],
             function () {
                 Route::prefix(':lc:package')->group(
                     function () {
